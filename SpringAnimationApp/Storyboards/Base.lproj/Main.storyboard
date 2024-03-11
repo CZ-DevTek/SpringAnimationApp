@@ -27,11 +27,15 @@
                                 <state key="normal" title="Button">
                                     <color key="titleColor" red="0.00060405927839999999" green="0.00059389371350000004" blue="0.00052390463169999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="29P-iJ-h6t"/>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nDL-Tb-XWb"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Str-3p-X3a">
                                 <rect key="frame" x="74" y="74" width="227" height="184"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yGK-Yg-5vr">
+                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yGK-Yg-5vr">
                                         <rect key="frame" x="16" y="25" width="63.5" height="134.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="FqG-vK-sYR">
@@ -73,10 +77,6 @@
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                                <constraints>
-                                    <constraint firstItem="yGK-Yg-5vr" firstAttribute="leading" secondItem="Str-3p-X3a" secondAttribute="leading" constant="16" id="4an-cQ-FmL"/>
-                                    <constraint firstItem="yGK-Yg-5vr" firstAttribute="top" secondItem="Str-3p-X3a" secondAttribute="top" constant="25" id="pPG-to-6VO"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -91,6 +91,10 @@
                             <constraint firstItem="Str-3p-X3a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="74" id="kTm-3s-LjS"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="effectButton" destination="kX8-NT-4mj" id="POJ-ZL-MOr"/>
+                        <outlet property="springyView" destination="Str-3p-X3a" id="s2U-pG-omz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

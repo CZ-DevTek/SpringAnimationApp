@@ -14,6 +14,9 @@
 		4F36F2D92B9FAC1100D1CE40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F36F2D82B9FAC1100D1CE40 /* Assets.xcassets */; };
 		4F36F2DC2B9FAC1100D1CE40 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 4F36F2DB2B9FAC1100D1CE40 /* Base */; };
 		4F36F2E52B9FAC5D00D1CE40 /* SpringAnimation in Frameworks */ = {isa = PBXBuildFile; productRef = 4F36F2E42B9FAC5D00D1CE40 /* SpringAnimation */; };
+		4F36F2E92B9FBADC00D1CE40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F36F2D52B9FAC0F00D1CE40 /* Main.storyboard */; };
+		4F36F2EC2B9FBD8800D1CE40 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F36F2EB2B9FBD8800D1CE40 /* Model.swift */; };
+		4F36F2EF2B9FBDF900D1CE40 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F36F2EE2B9FBDF900D1CE40 /* DataStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +28,8 @@
 		4F36F2D82B9FAC1100D1CE40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F36F2DB2B9FAC1100D1CE40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F36F2DD2B9FAC1100D1CE40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F36F2EB2B9FBD8800D1CE40 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		4F36F2EE2B9FBDF900D1CE40 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +66,8 @@
 				4F36F2E82B9FAE8900D1CE40 /* Config */,
 				4F36F2E62B9FAE3300D1CE40 /* View Controllers */,
 				4F36F2E72B9FAE6A00D1CE40 /* Storyboards */,
+				4F36F2EA2B9FBD4200D1CE40 /* Model */,
+				4F36F2ED2B9FBDDB00D1CE40 /* Services */,
 				4F36F2D82B9FAC1100D1CE40 /* Assets.xcassets */,
 			);
 			path = SpringAnimationApp;
@@ -91,6 +98,22 @@
 				4F36F2DD2B9FAC1100D1CE40 /* Info.plist */,
 			);
 			path = Config;
+			sourceTree = "<group>";
+		};
+		4F36F2EA2B9FBD4200D1CE40 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4F36F2EB2B9FBD8800D1CE40 /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4F36F2ED2B9FBDDB00D1CE40 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4F36F2EE2B9FBDF900D1CE40 /* DataStore.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +183,7 @@
 				4F36F2D92B9FAC1100D1CE40 /* Assets.xcassets in Resources */,
 				4F36F2DC2B9FAC1100D1CE40 /* Base in Resources */,
 				4F36F2D72B9FAC0F00D1CE40 /* Base in Resources */,
+				4F36F2E92B9FBADC00D1CE40 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,6 +197,8 @@
 				4F36F2D42B9FAC0F00D1CE40 /* ViewController.swift in Sources */,
 				4F36F2D02B9FAC0F00D1CE40 /* AppDelegate.swift in Sources */,
 				4F36F2D22B9FAC0F00D1CE40 /* SceneDelegate.swift in Sources */,
+				4F36F2EF2B9FBDF900D1CE40 /* DataStore.swift in Sources */,
+				4F36F2EC2B9FBD8800D1CE40 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
