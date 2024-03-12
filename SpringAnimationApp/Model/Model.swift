@@ -8,28 +8,22 @@
 import Foundation
 
 struct Effect {
-    let preset: String
+    let animation: String
     let curve: String
-    let force: String
-    let duration: String
-    let delay: String
-    
-    static func getEffects() -> [Effect] {
-        let data = DataStore.shared
-        var result: [Effect] = []
-        
-        for effect in data.effects {
-            result.append(
-                Effect(
-                    preset: effect.preset,
-                    curve: effect.curve,
-                    force: effect.force,
-                    duration: effect.duration,
-                    delay: effect.delay
-                )
-            )
-        }
-        return result
+    let force: Double
+    let duration: Double
+    let delay: Double
+
+    static func getDefaultValues() -> Effect {
+        Effect(
+            animation: "pop",
+            curve: "easeInt",
+            force: 1,
+            duration: 0.7,
+            delay: 0
+        )
     }
 }
+
+
 
