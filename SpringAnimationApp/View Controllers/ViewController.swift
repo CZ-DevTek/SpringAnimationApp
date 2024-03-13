@@ -8,7 +8,7 @@
 import UIKit
 import SpringAnimation
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
     
     @IBOutlet var springyView: SpringView!
     @IBOutlet var effectButton: SpringButton!
@@ -18,9 +18,9 @@ class ViewController: UIViewController {
     @IBOutlet var duration: UILabel!
     @IBOutlet var delay: UILabel!
     
-    var currentEffect: Effect?
-    var nextEffect: Effect?
-    var buttonTappedCount = 0
+    private var currentEffect: Effect?
+    private var nextEffect: Effect?
+    private var buttonTappedCount = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,12 +46,12 @@ class ViewController: UIViewController {
         updateView()
     }
     
-    func setupNextEffect() {
+    private func setupNextEffect() {
         currentEffect = nextEffect
         nextEffect = DataStore.shared.randomEffect()
     }
     
-    func updateView() {
+    private func updateView() {
         switch buttonTappedCount {
             case 0:
                 animation.text = "Animation: \(nextEffect?.animation ?? "")"
