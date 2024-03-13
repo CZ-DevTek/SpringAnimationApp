@@ -20,51 +20,53 @@ class ViewController: UIViewController {
     
     var currentEffect: Effect?
     var nextEffect: Effect?
+    var buttonTappedCount = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         effectButton.setTitle("Run", for: .normal)
         springyView.layer.cornerRadius = 10
         effectButton.layer.cornerRadius = 10
-        nextEffect = DataStore.shared.randomEffect()
-        currentEffect = nextEffect
-        /* aqui no entiende cual es el valor de las labels una por una por eso no las carga, y se podria crear una funcion updateLabels que basicamente permitiera llamar aqui y en el bottton a la funcion
-        private func updateLabels(with effect: Effect?) {
-                if let effect = effect {
-                    animation.text = "Animation: \(effect.animation)"
-                    curve.text = "Curve: \(effect.curve)"
-                    force.text = String(format: "Force: %.2f", effect.force)
-                    duration.text = String(format: "Duration: %.2f", effect.duration)
-                    delay.text = String(format: "Delay: %.2f", effect.delay)
-         */
+        setupNextEffect()
+        updateView()
     }
     
     @IBAction func buttonTapped(_ sender: SpringButton) {
-        let nextRandomEffect = DataStore.shared.randomEffect()
+        
+        springyView.animation = nextEffect?.animation ?? ""
+        springyView.curve = nextEffect?.curve ?? ""
+        springyView.force = CGFloat(nextEffect?.force ?? 0)
+        springyView.duration = CGFloat(nextEffect?.duration ?? 0)
+        springyView.delay = nextEffect?.delay ?? 0
         
         
-        if let currentEffect = currentEffect {
-               animation.text = "Animation: \(currentEffect.animation)"
-               curve.text = "Curve: \(currentEffect.curve)"
-               force.text = String(format: "Force: %.2f", currentEffect.force)
-               duration.text = String(format: "Duration: %.2f", currentEffect.duration)
-               delay.text = String(format: "Delay: %.2f", currentEffect.delay)
-           }
-        
-        effectButton.setTitle(nextRandomEffect.animation, for: .normal)
-        currentEffect = nextRandomEffect
-        
-        springyView.animation = nextRandomEffect.animation
-        springyView.curve = nextRandomEffect.curve
-        springyView.force = CGFloat(nextRandomEffect.force)
-        springyView.duration = CGFloat(nextRandomEffect.duration)
-        springyView.delay = nextRandomEffect.delay
-        
+        setupNextEffect()
         springyView.animate()
-        
+        buttonTappedCount += 1
+        updateView()
     }
-
+    
+    func setupNextEffect() {
+        currentEffect = nextEffect
+        nextEffect = DataStore.shared.randomEffect()
+    }
+    
+    func updateView() {
+        switch buttonTappedCount {
+            case 0:
+                animation.text = "Animation: \(nextEffect?.animation ?? "")"
+                curve.text = "Curve: \(nextEffect?.curve ?? "")"
+                force.text = String(format: "Force: %.2f", nextEffect?.force ?? 0)
+                duration.text = String(format: "Duration: %.2f", nextEffect?.duration ?? 0)
+                delay.text = String(format: "Delay: %.2f", nextEffect?.delay ?? 0)
+                effectButton.setTitle("Run", for: .normal)
+            default:
+                animation.text = "Animation: \(currentEffect?.animation ?? "")"
+                curve.text = "Curve: \(currentEffect?.curve ?? "")"
+                force.text = String(format: "Force: %.2f", currentEffect?.force ?? 0)
+                duration.text = String(format: "Duration: %.2f", currentEffect?.duration ?? 0)
+                delay.text = String(format: "Delay: %.2f", currentEffect?.delay ?? 0)
+                effectButton.setTitle(nextEffect?.animation, for: .normal)
+        }
+    }
 }
-
-
-

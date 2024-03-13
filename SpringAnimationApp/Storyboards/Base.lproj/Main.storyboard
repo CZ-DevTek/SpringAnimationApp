@@ -76,18 +76,21 @@
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Str-3p-X3a" secondAttribute="height" multiplier="227:184" id="86E-LI-WIo"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Str-3p-X3a" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="54" id="2a7-yK-yMQ"/>
-                            <constraint firstItem="Str-3p-X3a" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="I2P-Ax-XKQ"/>
+                            <constraint firstItem="Str-3p-X3a" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="54" id="AhT-qD-5kx"/>
                             <constraint firstItem="kX8-NT-4mj" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="IWw-5b-yOY"/>
+                            <constraint firstItem="Str-3p-X3a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="74" id="LNP-Mk-0Px"/>
                             <constraint firstItem="kX8-NT-4mj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="53" id="TYK-1R-Vvh"/>
-                            <constraint firstAttribute="bottom" secondItem="Str-3p-X3a" secondAttribute="bottom" constant="409" id="gfp-nx-LLM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kX8-NT-4mj" secondAttribute="bottom" constant="142" id="hse-bh-Tm9"/>
-                            <constraint firstItem="Str-3p-X3a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="74" id="kTm-3s-LjS"/>
+                            <constraint firstItem="Str-3p-X3a" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="stz-rr-Zt5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Str-3p-X3a" secondAttribute="trailing" constant="74" id="wTi-BK-SEx"/>
                         </constraints>
                     </view>
                     <connections>
